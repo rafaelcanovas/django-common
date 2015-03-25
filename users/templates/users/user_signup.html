@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="wrapper">
+	<form class="signup-form" action="." method="POST">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<p>
+			<input type="submit" value="Cadastrar-se">
+		</p>
+	</form>
+</div>
+{% endblock %}

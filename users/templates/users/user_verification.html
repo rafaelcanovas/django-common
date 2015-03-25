@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="wrapper">
+	<h3>Cadastro realizado com sucesso</h3>
+	<p>
+		Um e-mail de confirmação foi enviado para <strong>{{ request.user.email }}</strong><br>
+	</p>
+	<p>
+		<a href="{% url 'home' %}">
+			Continuar
+		</a>
+	</p>
+</div>
+{% endblock %}

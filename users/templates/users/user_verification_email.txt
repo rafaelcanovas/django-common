@@ -1,0 +1,4 @@
+Olá {{ user.get_short_name }}!
+
+Para concluir seu cadastro acesse o seguinte endereço:
+{{ verification_url }}

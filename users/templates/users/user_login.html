@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="wrapper">
+	<form class="login-form" action="." method="POST">
+		{% csrf_token %}
+		{{ form.as_p }}
+		{# <p class="helper"> #}
+			{# <a href="{% url 'password_reset' %}"> #}
+				{# Esqueci minha senha #}
+			{# </a> #}
+		{# </p> #}
+		<p>
+			<input type="submit" value="Entrar">
+		</p>
+	</form>
+</div>
+{% endblock %}
