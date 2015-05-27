@@ -32,4 +32,3 @@ class UserChangeForm(UserChangeForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        del self.fields['username']  # We don't need username, we use email
