@@ -96,9 +96,10 @@ def user_password_reset_done(request):
 def user_password_reset_confirm(request, uidb64, token):
     return password_reset_confirm_view(
         request,
-        template_name='users/user_password_reset_confirm.html',
+        token=token,
         uidb64=uidb64,
-        token=token
+        template_name='users/user_password_reset_confirm.html',
+        post_reset_redirect='users:password_reset_complete'
     )
 
 
