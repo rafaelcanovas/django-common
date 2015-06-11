@@ -71,9 +71,13 @@ def user_verify(request, uidb64, token):
         user.is_verified = True
         user.save()
 
-        return redirect(settings.LOGIN_REDIRECT_URL)
+        return redirect('users:user_verify_done')
     else:
         raise Http404
+
+
+def user_verify_done(request):
+    return render(request, 'users/user_verify_done.html')
 
 
 def user_password_reset(request):

@@ -9,6 +9,8 @@ urlpatterns = patterns('users.views',
         name='user_verification'),
     url(r'^verify/(?P<uidb64>[^/]+)/(?P<token>[^/]+)/$', 'user_verify',
         name='user_verify'),
+    url(r'^verify/done/$', 'user_verify_done',
+        name='user_verify_done'),
 
     url(r'^password-reset/$', 'user_password_reset',
         name='password_reset'),
