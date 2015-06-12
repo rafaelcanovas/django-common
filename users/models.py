@@ -63,7 +63,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
         return send_template_mail(
             'Verificação de email',
-            'users/user_verification_email.txt',
+            'users/user_verification_email.html',
             {
                 'user': self,
                 'verification_url': request.build_absolute_uri(
