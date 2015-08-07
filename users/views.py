@@ -31,7 +31,7 @@ def user_signup(request):
 
             user.send_verification_mail(request)
 
-            return redirect('home')
+            return redirect('users:user_verification')
     else:
         f = UserSignupForm()
 
