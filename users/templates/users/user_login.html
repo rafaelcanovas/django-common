@@ -4,6 +4,8 @@
 <div class="wrapper">
 	<form class="login-form" action="." method="POST">
 		{% csrf_token %}
+		<input type="hidden" name="next" value="{{ request.GET.next }}">
+
 		{{ form.as_p }}
 
 		<p class="helper">
