@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="wrapper">
+<div class="container">
 	<form class="signup-form" action="." method="POST">
 		{% csrf_token %}
 		{{ form.as_p }}

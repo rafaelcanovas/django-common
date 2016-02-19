@@ -1,5 +1,4 @@
 from django.http import Http404
-from django.conf import settings
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.utils.http import urlsafe_base64_decode
